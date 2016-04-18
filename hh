@@ -30,7 +30,8 @@ public class IeTest extends BaseTest {
             //assertNotNull(driver.findElements(By.className("team-list clearfix")));
             //System.out.println(driver.findElements(By.className("team-list clearfix")).findElement(By.linkText("Анастасия ")));
         WebElement el = driver.findElement(By.linkText("О нас"));
-        WebElement element= driver.findElement(By.xpath("//div[@class='team-list clearfix']/div[@class='member']/a/span[contains(text(),'Анастасия ')]"));
+        WebElement element= driver.findElement(By.linkText("Наша команда"));
+        //driver.findElement(By.xpath("//div[@class='team-list clearfix']/div[@class='member']/a/span[contains(text(),'Анастасия ')]"));
         Actions dr = new Actions(driver);
         dr.moveToElement(el);
         dr.moveToElement(element);
